@@ -1,7 +1,7 @@
-import {getUser} from '/src/scripts/services/user.js'
-import {repositories} from '/src/scripts/services/repositories.js'
-import {user} from '/src/scripts/objects/user.js'
-
+import { getUser } from '/src/scripts/services/user.js'
+import { repositories } from '/src/scripts/services/repositories.js'
+import { user } from '/src/scripts/objects/user.js'
+import { screen } from '/src/scripts/objects/screen.js'
 // Esse document chama a funcao ao clicar no botao buscar
 document.getElementById("btn-search").addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
@@ -18,20 +18,15 @@ document.getElementById("input-search").addEventListener('keyup', (e) => {
 
 async function getUserProfile(userName) {
 
-    await getUser(userName)
-     
+    const userResponse = await getUser(userName) 
+    user.setInfo(userResponse)
+
+
+    //user.repositories(repositories)
 
     // getUser(userName).then(userData => {
 
-    //     let userInfo = `
-    //     <div class = "info">
-    //         <img class='img' src="${userData.avatar_url} alt="Foto do perfil do usuario"/>
-    //         <div class="data" >
-    //         <h1>${userData.name ?? 'Não possui nome cadastrado  😭'}</h1>
-    //         <p>${userData.bio ?? 'Não possui bio cadastrado  😭'}</p>
-    //         </div>
-    //     </div> `
-    //     document.querySelector('.profile-data').innerHTML = userInfo
+    screen.renderUser(user)
 
     //     getUserRepositories(userName)
     // })
@@ -41,7 +36,7 @@ async function getUserProfile(userName) {
 function getUserRepositories(userName) {
     repositories(userName).then(reposData => {
         let repositoriesitens = ""
-//target="_blank"
+        //target="_blank"
         reposData.forEach(repo => {
             console.log(repo)
             repositoriesitens += `<li><a href="${repo.html_url}"target="_blank" </a> ${repo.name}</li>`
@@ -53,7 +48,7 @@ function getUserRepositories(userName) {
             <ul>${repositoriesitens}</ul>
         </div>
         `
-        
+
     })
 }
 
