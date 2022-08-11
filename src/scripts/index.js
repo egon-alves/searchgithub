@@ -16,27 +16,26 @@ document.getElementById("input-search").addEventListener('keyup', (e) => {
     }
 })
 
-function getUserProfile(userName) {
+async function getUserProfile(userName) {
 
-    repositories(userName).then(reposData => {
-        console.log(reposData)
-    })
+    await getUser(userName)
+     
 
+    // getUser(userName).then(userData => {
 
-    getUser(userName).then(userData => {
+    //     let userInfo = `
+    //     <div class = "info">
+    //         <img class='img' src="${userData.avatar_url} alt="Foto do perfil do usuario"/>
+    //         <div class="data" >
+    //         <h1>${userData.name ?? 'Não possui nome cadastrado  😭'}</h1>
+    //         <p>${userData.bio ?? 'Não possui bio cadastrado  😭'}</p>
+    //         </div>
+    //     </div> `
+    //     document.querySelector('.profile-data').innerHTML = userInfo
 
-        let userInfo = `
-        <div class = "info">
-            <img class='img' src="${userData.avatar_url} alt="Foto do perfil do usuario"/>
-            <div class="data" >
-            <h1>${userData.name ?? 'Não possui nome cadastrado  😭'}</h1>
-            <p>${userData.bio ?? 'Não possui bio cadastrado  😭'}</p>
-            </div>
-        </div> `
-        document.querySelector('.profile-data').innerHTML = userInfo
+    //     getUserRepositories(userName)
+    // })
 
-        getUserRepositories(userName)
-    })
 }// campo para repositorio
 
 function getUserRepositories(userName) {
