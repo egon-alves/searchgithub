@@ -1,4 +1,6 @@
-import { baseUrl, repositoriesQuantity } from '/src/scripts/variables.js'
+import {getUser} from '/src/scripts/services/user.js'
+import {repositories} from '/src/scripts/services/repositories.js'
+import {user} from '/src/scripts/objects/user.js'
 
 // Esse document chama a funcao ao clicar no botao buscar
 document.getElementById("btn-search").addEventListener('click', () => {
@@ -13,27 +15,15 @@ document.getElementById("input-search").addEventListener('keyup', (e) => {
         getUserProfile(userName)
     }
 })
-// funcao busca os usuarios
-async function user(userName) {
-    const response = await fetch(`${baseUrl}${userName}`)
-    return await response.json()
-}
-
-// funcao busca os repositorios
-async function repos(userName) {
-    const response = await fetch(`${baseUrl}${userName}/repos?per_page=${repositoriesQuantity}`)
-    return await response.json()
-}
-
 
 function getUserProfile(userName) {
 
-    repos(userName).then(reposData => {
+    repositories(userName).then(reposData => {
         console.log(reposData)
     })
 
 
-    user(userName).then(userData => {
+    getUser(userName).then(userData => {
 
         let userInfo = `
         <div class = "info">
@@ -50,7 +40,7 @@ function getUserProfile(userName) {
 }// campo para repositorio
 
 function getUserRepositories(userName) {
-    repos(userName).then(reposData => {
+    repositories(userName).then(reposData => {
         let repositoriesitens = ""
 //target="_blank"
         reposData.forEach(repo => {
