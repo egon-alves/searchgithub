@@ -1,54 +1,34 @@
 import { getUser } from '/src/scripts/services/user.js'
-import { repositories } from '/src/scripts/services/repositories.js'
+import { getRepositories } from '/src/scripts/services/repositories.js'
 import { user } from '/src/scripts/objects/user.js'
 import { screen } from '/src/scripts/objects/screen.js'
 // Esse document chama a funcao ao clicar no botao buscar
 document.getElementById("btn-search").addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
-    getUserProfile(userName)
+    getUserData(userName)
 })
 // Esse document chama a funcao ao apertar enter
 document.getElementById("input-search").addEventListener('keyup', (e) => {
     const userName = e.target.value
     const key = e.which || e.keyCode
     if (key === 13) {
-        getUserProfile(userName)
+        getUserData(userName)
     }
 })
 
-async function getUserProfile(userName) {
+async function getUserData(userName) {
 
     const userResponse = await getUser(userName) 
+    const repositoriesResponse = await getRepositories(userName) 
+
     user.setInfo(userResponse)
-
-
-    //user.repositories(repositories)
-
-    // getUser(userName).then(userData => {
-
+    user.setRepositories(repositoriesResponse)
+ 
     screen.renderUser(user)
 
+    console.log(user)
     //     getUserRepositories(userName)
     // })
 
 }// campo para repositorio
-
-function getUserRepositories(userName) {
-    repositories(userName).then(reposData => {
-        let repositoriesitens = ""
-        //target="_blank"
-        reposData.forEach(repo => {
-            console.log(repo)
-            repositoriesitens += `<li><a href="${repo.html_url}"target="_blank" </a> ${repo.name}</li>`
-
-        });
-        document.querySelector('.profile-data').innerHTML += `
-        <div class='repositories section'>
-            <h2>Repositórios</h2>
-            <ul>${repositoriesitens}</ul>
-        </div>
-        `
-
-    })
-}
 
