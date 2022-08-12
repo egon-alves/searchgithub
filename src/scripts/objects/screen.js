@@ -40,11 +40,13 @@ const screen = {
         </a> </li>
         `);
 
-        if (user.repositories.length > 0) {
-            this.userProfile.innerHTML += `<div class="repositories section" >
-                <h2>Repositorio</h2> 
-                <ul>${repositoriesItens}</ul>
-                </div>`
+        if (user.repositories.length > 0) { 
+            this.userProfile.innerHTML += `
+            
+    <div class="repositories section" >
+      <h2>Repositorio</h2> 
+      <ul>${repositoriesItens}</ul>
+      </div>  `
         }
 // repositorio fim 
 
@@ -64,7 +66,11 @@ const screen = {
         this.userProfile.innerHTML += `
         <div class="section atividades" >
         <h2>Atividades </h2> 
+        <details>
+        <summary>Ver atividades </summary>
         <ul>${eventList}</ul></br>
+      </details>
+        
         </div>`
         
         console.log(user.eventos)
