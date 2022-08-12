@@ -16,7 +16,6 @@ Ao longo do projeto utilizei github para versionamento do código, criando branc
 - Prestar mais atenção na hora de importar arquivos.
 
 #### Solicitação 1 - (branch:solicitacao1)
-
 ##### Implementações a serem feitas
 - Adicionar numero de seguidor do usuário
 - Adicionar numero de pessoas seguindo o usuario.
@@ -24,7 +23,37 @@ Ao longo do projeto utilizei github para versionamento do código, criando branc
 ##### resumo
 - Criei uma branch pra implementar o painel com numero de seguidores
 
-#### Solicitação 2 - (branch:solicitacao2)
+#### Solicitação 2 - 
+##### Implementações a serem feitas
 
+- Você deve apresentar na tela uma lista com até
+10 últimos eventos do usuário no GitHub. Os
+eventos que serão apresentados são de dois
+tipos: CreateEvent e PushEvent apenas.
+
+
+##### resumo 
+- Não consegui colocar os dois eventos, não achei o caminho correto da api pra chamar essa informacao
+
+#### Solicitação 3 -
+##### Implementações a serem feitas
+
+Você precisa mostrar também
+Quantidade de forks do repositório
+Quantidade de estrelas do repositório
+Quantidade de watchers do repositório
+Mostrar a linguagem de programação do
+repositório
+
+
+##### resumo 
+Implementei as informações solicitadas, porem não consegui transformar a linguagem em um icon
+
+
+#### ideias para implemantar futuramente e erro
+
+- Estilizar o layout, responsividade do site não esta 100% 
+
+- Implementar a opção de poder ocultar os repositorios e atividades
 
 

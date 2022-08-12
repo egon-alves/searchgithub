@@ -240,12 +240,10 @@ main {
   
   .container header #input-search,
   .container header #btn-search{
-    width: 60vh;
+    width: 100%;
   }
-  .container .profile-data .repositories ul li a {
-    width: 40vh;
-  }
-  
+
+
 }
 
 @media (max-width: 425px) {
