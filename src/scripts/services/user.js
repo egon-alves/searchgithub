@@ -1,8 +1,8 @@
 import { baseUrl } from '../variables.js'
 // funcao busca os usuarios
 async function getUser(userName) {
-    const response = await fetch(`${baseUrl}egon-alves`)
+    const response = await fetch(`${baseUrl}${userName}`)
     return await response.json()
 }
-//${userName}
+//
 export { getUser } 
