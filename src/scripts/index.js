@@ -1,4 +1,4 @@
-console.log('caiuu aqui')
+console.log('chegou no index.js ')
 
 import { getUser } from './services/user.js'
 import { getRepositories } from './services/repositories.js'

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +11,7 @@ img {
 
 body {
   background-color:#24292e;
-  font-family: "Kumbh Sans", sans-serif;  
+  font-family: 'Roboto Mono', monospace;
   text-align: center;    
   padding-bottom: 100px;
 }
@@ -83,25 +82,33 @@ main {
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
-  color: #ffffff;
+  background-color: aquamarine;
+  color: black;
   border-color: #ffffff;
 }
 
-.container .profile-data{
+.container .profile-data{ 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;  
+  padding: 20px;  
 }
 
-.container .profile-data .info {
+.menu-followers {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around; 
+  padding-top: 20px;
+  /* border: 1px solid red; */
+}
+
+.container .profile-data .info { 
   display: flex;  
   flex-wrap: wrap;
   align-items: center;
 }
 
-.container .profile-data .info .data{
+.container .profile-data .info .data{ 
   padding: 40px;
   width: 50%;
 }
@@ -109,7 +116,7 @@ main {
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid aquamarine;
 }
 
 .container .profile-data .info h1{
@@ -147,8 +154,8 @@ main {
 }
 
 .container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
-  color: #fff
+  background-color:aquamarine;
+  color: black ;
 }
 
 .container .profile-data.hide{
