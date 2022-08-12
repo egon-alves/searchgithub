@@ -17,8 +17,9 @@ Ao longo do projeto utilizei github para versionamento do código, criando branc
 
 Solicitação 1 - (branch:solicitacao1)
 
-Implementações a serem feitas
+****Implementações a serem feitas
 
 Adicionar numero de seguidor do usuário
 Adicionar numero de pessoas seguindo o usuario.
 
+Resumo
