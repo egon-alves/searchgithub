@@ -264,6 +264,6 @@ main {
 
 
   .container .profile-data .repositories ul li a {
-    width: 60vh;
+    width: 100%;
   }
 }
