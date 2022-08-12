@@ -44,7 +44,7 @@ const screen = {
             this.userProfile.innerHTML += `
             
     <div class="repositories section" >
-      <h2>Repositorio</h2> 
+      <h2>Repositorios</h2> 
       <ul>${repositoriesItens}</ul>
       </div>  `
         }
