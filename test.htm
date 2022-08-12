@@ -1,11 +1,24 @@
-<div class = "info">
-    <img class='img' src="${user.avatarUrl}" alt="Foto do perfil do usuario" />
-    <div class="data" >
-    <h1>${user.name ?? 'Não possui nome cadastrado  😭'}</h1>
-    <p>${user.bio ?? 'Não possui bio cadastrado  😭'}</p>
-  <div class="menu-followers">
-    <p>Seguidores: ${user.followers}</p>
-    <p>Seguindo:${user.following} </p>
+<li><a href="${repo.html_url}" target="_blank" > 
+ <div class="menuRepositorio">
+  <div class="title-repositorio">
+    ${repo.name} 
+
+  
+       
+  
   </div>
-    </div>
-</div> 
+  <div class="list-repositorio">
+    <i class=""> ${repo.forks_count} </i>
+     <i class="">  ${repo.stargazers_count} </i>
+     <i class="">  ${repo.watchers_count}</i>
+     <i class="">  ${repo.language} </i>
+  </div>
+ </div>
+  
+  
+  </a> </li>
+  <i class="fa-regular fa-code-fork ml"> ${repo.forks_count}</i>
+  <i class="fa-solid fa-star ml"> {repo.stargazers_count}</i>
+  <i class="fa-solid fa-eyes ml"> {repo.watchers_count}</i>
+  <i class="fa-solid fa-bracket-curly ml"> ${repo.language}</i><i class="fa-solid fa-bracket-curly-right"></i>
+  <i class="></i>

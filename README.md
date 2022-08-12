@@ -21,8 +21,10 @@ Ao longo do projeto utilizei github para versionamento do código, criando branc
 - Adicionar numero de seguidor do usuário
 - Adicionar numero de pessoas seguindo o usuario.
 
-Resumo 
+##### resumo
+- Criei uma branch pra implementar o painel com numero de seguidores
 
+#### Solicitação 2 - (branch:solicitacao2)
 
 
 
